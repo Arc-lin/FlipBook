@@ -119,10 +119,11 @@ public final class FlipBook: NSObject {
                         print(error)
                     }
                     self?.writer.append(buffer, type: type)
-                }, completionHandler: { error in
+                }, completionHandler: { [weak self] error in
                     guard let error = error else {
                         return
                     }
+                    self?.onCompletion?(.failure(error))
                     print(error)
                 })
             } else {
