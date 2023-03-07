@@ -32,6 +32,6 @@ Pod::Spec.new do |spec|
   spec.author             = { "arclin" => "arclin325@gmail.com" }
   spec.platform     = :ios, "10.0"
   spec.source       = { :git => "https://github.com/Arc-lin/FlipBook.git", :tag => "#{spec.version}" }
-  spec.source_files  = "Sources", "Sources/**/*.{h,m}"
+  spec.source_files  = "Sources", "Sources/**/*.{h,m,swift}"
 
 end
