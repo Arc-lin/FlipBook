@@ -27,5 +27,5 @@ let package = Package(
         .testTarget(
             name: "FlipBookTests",
             dependencies: ["FlipBook"]),
-    ]
+    ], swiftLanguageVersions: [.v5]
 )
