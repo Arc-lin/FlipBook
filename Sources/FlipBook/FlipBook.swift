@@ -87,8 +87,15 @@ public final class FlipBook: NSObject {
     internal var displayLink: CADisplayLink?
     #endif
     
+    // MARK: - Public Computed Properties -
+
+    /// Whether a recording is currently in progress
+    public var isRecording: Bool {
+        sourceView != nil
+    }
+
     // MARK: - Public Methods -
-    
+
     /// Starts recording a view
     /// - Parameters:
     ///   - view: view to be recorded. This value is ignored if `shouldUseReplayKit` is set to `true`
