@@ -94,6 +94,17 @@ public final class FlipBook: NSObject {
         sourceView != nil
     }
 
+    /// Short human-readable description of a recording duration
+    public static func durationDescription(forSeconds seconds: Int) -> String {
+        if seconds < 10 {
+            return "just started"
+        } else if seconds < 60 {
+            return "in progress"
+        } else {
+            return "over a minute"
+        }
+    }
+
     // MARK: - Public Methods -
 
     /// Starts recording a view
