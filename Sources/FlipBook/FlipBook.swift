@@ -105,6 +105,20 @@ public final class FlipBook: NSObject {
         }
     }
 
+    /// Demo-only label based on a recording's frame rate. Used to verify incremental
+    /// coverage reporting picks up changes inside this component, not just the host app.
+    /// Only the "standard" branch is ever exercised by the demo app on purpose, so the
+    /// "low" and "high" branches stay uncovered.
+    public static func frameRateLabel(forFPS fps: Int) -> String {
+        if fps < 24 {
+            return "low"
+        } else if fps <= 60 {
+            return "standard"
+        } else {
+            return "high"
+        }
+    }
+
     // MARK: - Public Methods -
 
     /// Starts recording a view
